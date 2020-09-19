@@ -27,16 +27,16 @@ RUN \
  echo "**** fix XXXsonic status page ****" && \
  find /etc -name "accessibility.properties" -exec rm -fv '{}' + && \
  find /usr -name "accessibility.properties" -exec rm -fv '{}' + && \
- echo "**** install BOOKSONIC_AIR ****" && \
+ echo "**** install BOOKSONIC-AIR ****" && \
  if [ -z ${BOOKSONIC_AIR_RELEASE+x} ]; then \
- 	BOOKSONIC_AIR_RELEASE=$(curl -sX GET "https://api.github.com/repos/popeen/booksonic-air/releases/latest" \
+ 	BOOKSONIC_AIR_RELEASE=$(curl -sX GET "https://api.github.com/repos/popeen/Booksonic-Air/releases/latest" \
         | awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
  mkdir -p \
 	${BOOKSONIC_AIR_HOME} && \
  curl -o \
  ${BOOKSONIC_AIR_HOME}/booksonic.war -L \
-	"https://github.com/popeen/booksonic-air/releases/download/${BOOKSONIC_AIR_RELEASE}/booksonic.war" && \
+	"https://github.com/popeen/Booksonic-Air/releases/download/${BOOKSONIC_AIR_RELEASE}/booksonic.war" && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
