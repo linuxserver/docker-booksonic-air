@@ -1,0 +1,29 @@
+---
+
+# jenkins variables
+project_name: docker-booksonic-air
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ls_branch: master
+repo_vars:
+  - EXT_GIT_BRANCH = 'master'
+  - EXT_USER = 'popeen'
+  - EXT_REPO = 'Booksonic-Air'
+  - BUILD_VERSION_ARG = 'BOOKSONIC-AIR_RELEASE'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-booksonic-air'
+  - CONTAINER_NAME = 'booksonic-air'
+  - DOCKERHUB_IMAGE = 'linuxserver/booksonic-air'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/booksonic-air'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/booksonic-air'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='true'
+  - CI_PORT='4040'
+  - CI_SSL='false'
+  - CI_DELAY='120'
+  - CI_DOCKERENV='TZ=US/Pacific'
+  - CI_AUTH='user:password'
+  - CI_WEBPATH=''
