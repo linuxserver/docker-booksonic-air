@@ -4,7 +4,7 @@
 project_name: booksonic-air
 project_url: "http://booksonic.org"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/booksonic-air.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a platform for accessing the audibooks you own wherever you are. At the moment the platform consists of
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of
 
 Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.
 Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.
