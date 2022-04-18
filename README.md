@@ -41,7 +41,8 @@ Find us at:
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fbooksonic-air%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/booksonic-air/latest/index.html)
 
 [Booksonic-air](http://booksonic.org) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of
-Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic. Booksonic App - An DSub based Android app for connection to Booksonic-Air servers. .
+* Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.
+* Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.
 
 [![booksonic-air](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/booksonic-air.png)](http://booksonic.org)
 
@@ -242,4 +243,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **18.04.22:** - Rebase to Alpine 3.15.
 * **15.09.20:** - Initial Release.
