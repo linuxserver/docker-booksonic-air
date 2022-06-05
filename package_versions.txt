@@ -90,7 +90,7 @@ ncurses-terminfo-base-6.3_p20211120-r0
 nettle-3.7.3-r0
 nghttp2-libs-1.46.0-r0
 nspr-4.32-r0
-nss-3.76.1-r0
+nss-3.78.1-r0
 openjdk8-jre-8.322.06-r0
 openjdk8-jre-base-8.322.06-r0
 openjdk8-jre-lib-8.322.06-r0
