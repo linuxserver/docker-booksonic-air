@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.15
+FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-focal
 
 # set version label
 ARG BUILD_DATE
@@ -13,31 +13,35 @@ BOOKSONIC_AIR_SETTINGS="/config" \
 LANG="C.UTF-8"
 
 RUN \
-  echo "**** install runtime packages ****" && \
-  apk add -U --no-cache \
-    curl \
-    ffmpeg \
-    flac \
-    fontconfig \
-    lame \
-    openjdk8-jre \
-    ttf-dejavu && \
-  echo "**** fix XXXsonic status page ****" && \
-  find /etc -name "accessibility.properties" -exec rm -fv '{}' + && \
-  find /usr -name "accessibility.properties" -exec rm -fv '{}' + && \
-  echo "**** install BOOKSONIC-AIR ****" && \
-  if [ -z ${BOOKSONIC_AIR_RELEASE+x} ]; then \
-    BOOKSONIC_AIR_RELEASE=$(curl -sX GET "https://api.github.com/repos/popeen/Booksonic-Air/releases/latest" \
-    | awk '/tag_name/{print $4;exit}' FS='[""]'); \
-  fi && \
-  mkdir -p \
-    ${BOOKSONIC_AIR_HOME} && \
-  curl -o \
-  ${BOOKSONIC_AIR_HOME}/booksonic.war -L \
-    "https://github.com/popeen/Booksonic-Air/releases/download/${BOOKSONIC_AIR_RELEASE}/booksonic.war" && \
-  echo "**** cleanup ****" && \
-  rm -rf \
-	/tmp/*
+ echo "**** install runtime packages ****" && \
+ apt-get update && \
+ apt-get install -y \
+	--no-install-recommends \
+	ca-certificates \
+	ffmpeg \
+	flac \
+	fontconfig \
+	lame \
+	openjdk-8-jre \
+	ttf-dejavu && \
+ echo "**** fix XXXsonic status page ****" && \
+ find /etc -name "accessibility.properties" -exec rm -fv '{}' + && \
+ find /usr -name "accessibility.properties" -exec rm -fv '{}' + && \
+ echo "**** install BOOKSONIC-AIR ****" && \
+ if [ -z ${BOOKSONIC_AIR_RELEASE+x} ]; then \
+ 	BOOKSONIC_AIR_RELEASE=$(curl -sX GET "https://api.github.com/repos/popeen/Booksonic-Air/releases/latest" \
+        | awk '/tag_name/{print $4;exit}' FS='[""]'); \
+ fi && \
+ mkdir -p \
+	${BOOKSONIC_AIR_HOME} && \
+ curl -o \
+ ${BOOKSONIC_AIR_HOME}/booksonic.war -L \
+	"https://github.com/popeen/Booksonic-Air/releases/download/${BOOKSONIC_AIR_RELEASE}/booksonic.war" && \
+ echo "**** cleanup ****" && \
+ rm -rf \
+	/tmp/* \
+	/var/lib/apt/lists/* \
+	/var/tmp/*
 
 # add local files
 COPY root/ /

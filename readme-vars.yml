@@ -46,5 +46,6 @@ app_setup_block: "Whilst this is a more up to date rebase of the original Bookso
 
 # changelog
 changelogs:
+  - { date: "06.06.22:", desc: "Use ubuntu for armhf; fix umask build issues." }
   - { date: "18.04.22:", desc: "Rebase to Alpine 3.15." }
   - { date: "15.09.20:", desc: "Initial Release." }
