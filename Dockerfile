@@ -41,6 +41,7 @@ RUN \
 
 # add local files
 COPY root/ /
+RUN chmod a+rx /etc
 
 # ports and volumes
 EXPOSE 4040
