@@ -29,7 +29,6 @@ param_container_name: "{{ project_name }}"
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
-  - { env_var: "CONTEXT_PATH", env_value: "url-base", desc: "Base url for use with reverse proxies etc." }
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Configuration files." }
@@ -40,6 +39,10 @@ param_usage_include_ports: true
 param_ports:
   - { external_port: "4040", internal_port: "4040", port_desc: "Application WebUI" }
 
+# optional container parameters
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - { env_var: "CONTEXT_PATH", env_value: "url-base", desc: "Base url for use with reverse proxies etc." }
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: "Whilst this is a more up to date rebase of the original Booksonic server, upgrading in place is not supported and a fresh install has been recommended. Default user/pass is admin/admin"
