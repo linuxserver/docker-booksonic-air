@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+mkdir -p "${BOOKSONIC_AIR_SETTINGS}"/transcode
+
+if [[ ! -e "${BOOKSONIC_AIR_SETTINGS}"/transcode/ffmpeg ]] || [[ ! -e  "${BOOKSONIC_AIR_SETTINGS}"/transcode/flac ]] || [[ ! -e "${BOOKSONIC_AIR_SETTINGS}"/transcode/lame ]]; then
+    ln -sf /usr/bin/ffmpeg "${BOOKSONIC_AIR_SETTINGS}"/transcode/
+    ln -sf /usr/bin/flac "${BOOKSONIC_AIR_SETTINGS}"/transcode/
+    ln -sf /usr/bin/lame "${BOOKSONIC_AIR_SETTINGS}"/transcode/
+fi
+
+lsiown -R abc:abc \
+    /config \
+    "${BOOKSONIC_AIR_HOME}"
