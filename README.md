@@ -80,8 +80,8 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
-      - CONTEXT_PATH=url-base
+      - TZ=Europe/London
+      - CONTEXT_PATH=url-base #optional
     volumes:
       - /path/to/appdata/config:/config
       - /path/to/audiobooks:/audiobooks
@@ -100,7 +100,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
-  -e CONTEXT_PATH=url-base \
+  -e CONTEXT_PATH=url-base `#optional` \
   -p 4040:4040 \
   -v /path/to/appdata/config:/config \
   -v /path/to/audiobooks:/audiobooks \
