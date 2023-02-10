@@ -58,8 +58,15 @@ The architectures supported by this image are:
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
 | arm64 | ✅ | arm64v8-\<version tag\> |
-| armhf | ❌ | |
+| armhf | ✅ | arm32v7-\<version tag\> |
 
+## Version Tags
+
+This image provides various versions that are available via tags. Please read the descriptions carefully and exercise caution when using unstable or development tags.
+
+| Tag | Available | Description |
+| :----: | :----: |--- |
+| latest | ✅ | Stable booksonic-air releases |
 ## Application Setup
 
 Whilst this is a more up to date rebase of the original Booksonic server, upgrading in place is not supported and a fresh install has been recommended. Default user/pass is admin/admin
@@ -80,13 +87,13 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Etc/UTC
       - CONTEXT_PATH=url-base #optional
     volumes:
-      - /path/to/appdata/config:/config
-      - /path/to/audiobooks:/audiobooks
-      - /path/to/podcasts:/podcasts
-      - /path/to/othermedia:/othermedia
+      - </path/to/appdata/config>:/config
+      - </path/to/audiobooks>:/audiobooks
+      - </path/to/podcasts>:/podcasts
+      - </path/to/othermedia>:/othermedia
     ports:
       - 4040:4040
     restart: unless-stopped
@@ -102,10 +109,10 @@ docker run -d \
   -e TZ=Etc/UTC \
   -e CONTEXT_PATH=url-base `#optional` \
   -p 4040:4040 \
-  -v /path/to/appdata/config:/config \
-  -v /path/to/audiobooks:/audiobooks \
-  -v /path/to/podcasts:/podcasts \
-  -v /path/to/othermedia:/othermedia \
+  -v </path/to/appdata/config>:/config \
+  -v </path/to/audiobooks>:/audiobooks \
+  -v </path/to/podcasts>:/podcasts \
+  -v </path/to/othermedia>:/othermedia \
   --restart unless-stopped \
   lscr.io/linuxserver/booksonic-air:latest
 
@@ -236,6 +243,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **25.12.22:** - Rebase to Alpine 3.17, migrate to s6v3, bump jre to 11, deprecate armhf.
 * **18.04.22:** - Rebase to Alpine 3.15.
 * **15.09.20:** - Initial Release.
