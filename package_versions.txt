@@ -242,7 +242,7 @@ readline                        8.2.0-r0                                   apk
 recaptchav2-java                1.0.4                                      java-archive  
 saslprep                        1.1                                        java-archive  
 scanelf                         1.3.5-r1                                   apk           
-sdl2                            2.26.3-r0                                  apk           
+sdl2                            2.26.5-r0                                  apk           
 seamless-http                   1.1.0                                      java-archive  
 seamless-swing                  1.1.0                                      java-archive  
 seamless-util                   1.1.0                                      java-archive  
