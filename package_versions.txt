@@ -45,7 +45,7 @@ commons-pool2                   2.7.0                                      java-
 commons-text                    1.8                                        java-archive  
 core                            1.2.1-RELEASE                              java-archive  
 coreutils                       9.1-r0                                     apk           
-curl                            8.1.0-r1                                   apk           
+curl                            8.1.1-r1                                   apk           
 cxf-core                        3.3.12                                     java-archive  
 cxf-rt-bindings-soap            3.3.12                                     java-archive  
 cxf-rt-bindings-xml             3.3.12                                     java-archive  
@@ -134,7 +134,7 @@ libbsd                          0.11.7-r0                                  apk
 libbz2                          1.0.8-r4                                   apk           
 libc-utils                      0.7.2-r3                                   apk           
 libcrypto3                      3.0.8-r4                                   apk           
-libcurl                         8.1.0-r1                                   apk           
+libcurl                         8.1.1-r1                                   apk           
 libdav1d                        1.0.0-r2                                   apk           
 libdrm                          2.4.114-r0                                 apk           
 libexpat                        2.5.0-r0                                   apk           
@@ -200,8 +200,8 @@ musl                            1.2.3-r5                                   apk
 musl-utils                      1.2.3-r5                                   apk           
 mysql-connector-java            8.0.27                                     java-archive  
 natpmp                          0.1                                        java-archive  
-ncurses-libs                    6.3_p20221119-r0                           apk           
-ncurses-terminfo-base           6.3_p20221119-r0                           apk           
+ncurses-libs                    6.3_p20221119-r1                           apk           
+ncurses-terminfo-base           6.3_p20221119-r1                           apk           
 neethi                          3.1.1                                      java-archive  
 netcat-openbsd                  1.130-r4                                   apk           
 nettle                          3.8.1-r0                                   apk           
