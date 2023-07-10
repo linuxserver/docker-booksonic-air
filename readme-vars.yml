@@ -46,6 +46,7 @@ app_setup_block: "Whilst this is a more up to date rebase of the original Bookso
 
 # changelog
 changelogs:
+  - { date: "10.07.23:", desc: "Rebase to Alpine 3.18." }
   - { date: "25.12.22:", desc: "Rebase to Alpine 3.17, migrate to s6v3, bump jre to 11, deprecate armhf." }
   - { date: "18.04.22:", desc: "Rebase to Alpine 3.15." }
   - { date: "15.09.20:", desc: "Initial Release." }
