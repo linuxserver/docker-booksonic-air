@@ -111,7 +111,6 @@ jakarta.xml.bind-api            2.3.3                                      java-
 jakarta.xml.soap-api            1.4.2                                      java-archive  
 jakarta.xml.ws-api              2.3.3                                      java-archive  
 jaudiotagger                    2.2.5                                      java-archive  
-java                            11.0.20+8-alpine-r0                        binary        
 java-cacerts                    1.0-r1                                     apk           
 java-common                     0.5-r0                                     apk           
 java-jwt                        3.10.2                                     java-archive  
