@@ -11,6 +11,7 @@ project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a platform
  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers."
 
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "Audiobooks"
 
 # supported architectures
 available_architectures:
