@@ -7,7 +7,7 @@ airsonic-sonos-api              2201.1.0                                   java-
 alpine-baselayout               3.4.3-r1                                   apk           
 alpine-baselayout-data          3.4.3-r1                                   apk           
 alpine-keys                     2.4-r1                                     apk           
-alpine-release                  3.18.5-r0                                  apk           
+alpine-release                  3.18.6-r0                                  apk           
 alsa-lib                        1.2.9-r1                                   apk           
 ant                             1.10.12                                    java-archive  
 ant-launcher                    1.10.12                                    java-archive  
@@ -43,7 +43,7 @@ commons-lang3                   3.10                                       java-
 commons-pool2                   2.7.0                                      java-archive  
 commons-text                    1.8                                        java-archive  
 core                            1.2.1-RELEASE                              java-archive  
-coreutils                       9.3-r1                                     apk           
+coreutils                       9.3-r2                                     apk           
 curl                            8.5.0-r0                                   apk           
 cxf-core                        3.3.12                                     java-archive  
 cxf-rt-bindings-soap            3.3.12                                     java-archive  
@@ -141,7 +141,7 @@ libbluray                       1.3.4-r0                                   apk
 libbsd                          0.11.7-r1                                  apk           
 libbz2                          1.0.8-r5                                   apk           
 libc-utils                      0.7.2-r5                                   apk           
-libcrypto3                      3.1.4-r4                                   apk           
+libcrypto3                      3.1.4-r5                                   apk           
 libcurl                         8.5.0-r0                                   apk           
 libdav1d                        1.2.1-r0                                   apk           
 libdrm                          2.4.115-r4                                 apk           
@@ -171,7 +171,7 @@ libsndfile                      1.2.0-r2                                   apk
 libsodium                       1.0.18-r3                                  apk           
 libsrt                          1.5.2-r0                                   apk           
 libssh                          0.10.5-r0                                  apk           
-libssl3                         3.1.4-r4                                   apk           
+libssl3                         3.1.4-r5                                   apk           
 libstdc++                       12.2.1_git20220924-r10                     apk           
 libtasn1                        4.19.0-r1                                  apk           
 libtheora                       1.1.1-r17                                  apk           
@@ -207,7 +207,7 @@ lucene-analyzers-common         8.5.1                                      java-
 lucene-core                     8.5.1                                      java-archive  
 mariadb-java-client             2.6.0                                      java-archive  
 maven-artifact                  3.6.3                                      java-archive  
-mbedtls                         2.28.5-r0                                  apk           
+mbedtls                         2.28.7-r0                                  apk           
 metrics-core                    4.1.17                                     java-archive  
 metrics-jmx                     4.1.17                                     java-archive  
 mkfontscale                     1.2.2-r3                                   apk           
