@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.19
+FROM ghcr.io/linuxserver/baseimage-alpine:3.20
 
 # set version label
 ARG BUILD_DATE
@@ -36,6 +36,7 @@ RUN \
   curl -o \
   ${BOOKSONIC_AIR_HOME}/booksonic.war -L \
     "https://github.com/popeen/Booksonic-Air/releases/download/${BOOKSONIC_AIR_RELEASE}/booksonic.war" && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   rm -rf \
     /tmp/* \
