@@ -34,6 +34,9 @@ param_ports:
 opt_param_usage_include_env: true
 opt_param_env_vars:
   - { env_var: "CONTEXT_PATH", env_value: "url-base", desc: "Base url for use with reverse proxies etc." }
+
+readonly_supported: true
+
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: "While this is a more up to date rebase of the original Booksonic server, upgrading in place is not supported and a fresh install has been recommended. Default user/pass is admin/admin"
