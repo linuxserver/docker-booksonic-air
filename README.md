@@ -63,6 +63,11 @@ The architectures supported by this image are:
 
 While this is a more up to date rebase of the original Booksonic server, upgrading in place is not supported and a fresh install has been recommended. Default user/pass is admin/admin
 
+## Read-Only Operation
+
+This image can be run with a read-only container filesystem. For details please [read the docs](https://docs.linuxserver.io/misc/read-only/).
+
+
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
@@ -123,6 +128,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-v /audiobooks` | Audiobooks. |
 | `-v /podcasts` | Podcasts. |
 | `-v /othermedia` | Other media. |
+| `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
 
 ## Environment variables from files (Docker secrets)
 
