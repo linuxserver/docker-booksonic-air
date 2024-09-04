@@ -49,7 +49,7 @@ coreutils                       9.5-r1                                     apk
 coreutils-env                   9.5-r1                                     apk             
 coreutils-fmt                   9.5-r1                                     apk             
 coreutils-sha512sum             9.5-r1                                     apk             
-curl                            8.9.0-r0                                   apk             
+curl                            8.9.1-r1                                   apk             
 cxf-core                        3.3.12                                     java-archive    
 cxf-rt-bindings-soap            3.3.12                                     java-archive    
 cxf-rt-bindings-xml             3.3.12                                     java-archive    
@@ -146,7 +146,7 @@ libbluray                       1.3.4-r1                                   apk
 libbsd                          0.12.2-r0                                  apk             
 libbz2                          1.0.8-r6                                   apk             
 libcrypto3                      3.3.1-r3                                   apk             
-libcurl                         8.9.0-r0                                   apk             
+libcurl                         8.9.1-r1                                   apk             
 libdav1d                        1.4.2-r0                                   apk             
 libdovi                         3.3.0-r0                                   apk             
 libdrm                          2.4.120-r0                                 apk             
@@ -218,7 +218,7 @@ lucene-analyzers-common         8.5.1                                      java-
 lucene-core                     8.5.1                                      java-archive    
 mariadb-java-client             2.6.0                                      java-archive    
 maven-artifact                  3.6.3                                      java-archive    
-mbedtls                         3.6.0-r0                                   apk             
+mbedtls                         3.6.1-r0                                   apk             
 metrics-core                    4.1.17                                     java-archive    
 metrics-jmx                     4.1.17                                     java-archive    
 mkfontscale                     1.2.2-r6                                   apk             
