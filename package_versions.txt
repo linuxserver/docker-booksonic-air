@@ -241,7 +241,7 @@ openexr-libopenexr              3.1.13-r1                                  apk
 openjdk11-jre                   11.0.24_p8-r0                              apk             
 openjdk11-jre-headless          11.0.24_p8-r0                              apk             
 opus                            1.5.2-r0                                   apk             
-orc                             0.4.39-r0                                  apk             
+orc                             0.4.40-r0                                  apk             
 org.eclipse.persistence.asm     2.7.6                                      java-archive    
 org.eclipse.persistence.core    2.7.6                                      java-archive    
 org.eclipse.persistence.moxy    2.7.6                                      java-archive    
