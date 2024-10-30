@@ -128,7 +128,7 @@ jfreechart                      1.5.0                                      java-
 jlayer                          1.0.1.4                                    java-archive    
 jorbis                          0.0.17.4                                   java-archive    
 jq                              1.7.1-r0                                   apk             
-jrt-fs                          11.0.24                                    java-archive    
+jrt-fs                          11.0.25                                    java-archive    
 jsr305                          3.0.2                                      java-archive    
 jstl                            1.2                                        java-archive    
 jul-to-slf4j                    1.7.30                                     java-archive    
@@ -223,7 +223,7 @@ metrics-core                    4.1.17                                     java-
 metrics-jmx                     4.1.17                                     java-archive    
 mkfontscale                     1.2.2-r6                                   apk             
 mp3spi                          1.9.5.4                                    java-archive    
-mpg123-libs                     1.32.6-r0                                  apk             
+mpg123-libs                     1.32.8-r0                                  apk             
 musl                            1.2.5-r0                                   apk             
 musl-utils                      1.2.5-r0                                   apk             
 mysql-connector-java            8.0.27                                     java-archive    
@@ -238,8 +238,8 @@ oniguruma                       6.9.9-r0                                   apk
 openexr-libiex                  3.1.13-r1                                  apk             
 openexr-libilmthread            3.1.13-r1                                  apk             
 openexr-libopenexr              3.1.13-r1                                  apk             
-openjdk11-jre                   11.0.24_p8-r0                              apk             
-openjdk11-jre-headless          11.0.24_p8-r0                              apk             
+openjdk11-jre                   11.0.25_p9-r0                              apk             
+openjdk11-jre-headless          11.0.25_p9-r0                              apk             
 opus                            1.5.2-r0                                   apk             
 orc                             0.4.40-r0                                  apk             
 org.eclipse.persistence.asm     2.7.6                                      java-archive    
