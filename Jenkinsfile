@@ -583,7 +583,7 @@ pipeline {
           --label \"org.opencontainers.image.licenses=GPL-3.0-only\" \
           --label \"org.opencontainers.image.ref.name=${COMMIT_SHA}\" \
           --label \"org.opencontainers.image.title=Booksonic-air\" \
-          --label \"org.opencontainers.image.description=[Booksonic-air](http://booksonic.org) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:  * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.\" \
+          --label \"org.opencontainers.image.description=[Booksonic-air](http://booksonic.org) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:  * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.  \" \
           --no-cache --pull -t ${IMAGE}:${META_TAG} --platform=linux/amd64 \
           --provenance=false --sbom=false --builder=container --load \
           --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
@@ -647,7 +647,7 @@ pipeline {
               --label \"org.opencontainers.image.licenses=GPL-3.0-only\" \
               --label \"org.opencontainers.image.ref.name=${COMMIT_SHA}\" \
               --label \"org.opencontainers.image.title=Booksonic-air\" \
-              --label \"org.opencontainers.image.description=[Booksonic-air](http://booksonic.org) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:  * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.\" \
+              --label \"org.opencontainers.image.description=[Booksonic-air](http://booksonic.org) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:  * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.  \" \
               --no-cache --pull -t ${IMAGE}:amd64-${META_TAG} --platform=linux/amd64 \
               --provenance=false --sbom=false --builder=container --load \
               --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
@@ -704,7 +704,7 @@ pipeline {
               --label \"org.opencontainers.image.licenses=GPL-3.0-only\" \
               --label \"org.opencontainers.image.ref.name=${COMMIT_SHA}\" \
               --label \"org.opencontainers.image.title=Booksonic-air\" \
-              --label \"org.opencontainers.image.description=[Booksonic-air](http://booksonic.org) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:  * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.\" \
+              --label \"org.opencontainers.image.description=[Booksonic-air](http://booksonic.org) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:  * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.  \" \
               --no-cache --pull -f Dockerfile.aarch64 -t ${IMAGE}:arm64v8-${META_TAG} --platform=linux/arm64 \
               --provenance=false --sbom=false --builder=container --load \
               --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
