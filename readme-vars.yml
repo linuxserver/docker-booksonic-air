@@ -4,48 +4,80 @@
 project_name: booksonic-air
 project_url: "http://booksonic.org"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/booksonic-air.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:
-
- * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.
-
- * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers."
-
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:\n* Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.\n* Booksonic App - An DSub based Android app for connection to Booksonic-Air servers."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # container parameters
 common_param_env_vars_enabled: true #PGID, PUID, etc, you can set it to 'optional'
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Configuration files." }
-  - { vol_path: "/audiobooks", vol_host_path: "/path/to/audiobooks", desc: "Audiobooks." }
-  - { vol_path: "/podcasts", vol_host_path: "/path/to/podcasts", desc: "Podcasts." }
-  - { vol_path: "/othermedia", vol_host_path: "/path/to/othermedia", desc: "Other media." }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Configuration files."}
+  - {vol_path: "/audiobooks", vol_host_path: "/path/to/audiobooks", desc: "Audiobooks."}
+  - {vol_path: "/podcasts", vol_host_path: "/path/to/podcasts", desc: "Podcasts."}
+  - {vol_path: "/othermedia", vol_host_path: "/path/to/othermedia", desc: "Other media."}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "4040", internal_port: "4040", port_desc: "Application WebUI" }
-
+  - {external_port: "4040", internal_port: "4040", port_desc: "Application WebUI"}
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "CONTEXT_PATH", env_value: "url-base", desc: "Base url for use with reverse proxies etc." }
-
+  - {env_var: "CONTEXT_PATH", env_value: "url-base", desc: "Base url for use with reverse proxies etc."}
 readonly_supported: true
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: "While this is a more up to date rebase of the original Booksonic server, upgrading in place is not supported and a fresh install has been recommended. Default user/pass is admin/admin"
-
+# init diagram
+init_diagram: |
+  "booksonic-air:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-config -> init-booksonic-air-config
+    init-os-end -> init-config
+    init-booksonic-air-config -> init-config-end
+    init-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-services -> svc-booksonic-air
+    svc-booksonic-air -> legacy-services
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine:3.20"
+  }
+  "booksonic-air:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "31.05.24:", desc: "Rebase to Alpine 3.20." }
-  - { date: "20.03.24:", desc: "Rebase to Alpine 3.19." }
-  - { date: "10.07.23:", desc: "Rebase to Alpine 3.18." }
-  - { date: "25.12.22:", desc: "Rebase to Alpine 3.17, migrate to s6v3, bump jre to 11, deprecate armhf." }
-  - { date: "18.04.22:", desc: "Rebase to Alpine 3.15." }
-  - { date: "15.09.20:", desc: "Initial Release." }
+  - {date: "31.05.24:", desc: "Rebase to Alpine 3.20."}
+  - {date: "20.03.24:", desc: "Rebase to Alpine 3.19."}
+  - {date: "10.07.23:", desc: "Rebase to Alpine 3.18."}
+  - {date: "25.12.22:", desc: "Rebase to Alpine 3.17, migrate to s6v3, bump jre to 11, deprecate armhf."}
+  - {date: "18.04.22:", desc: "Rebase to Alpine 3.15."}
+  - {date: "15.09.20:", desc: "Initial Release."}
