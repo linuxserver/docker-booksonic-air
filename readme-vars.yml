@@ -4,7 +4,10 @@
 project_name: booksonic-air
 project_url: "http://booksonic.org"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/booksonic-air.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:\n* Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.\n* Booksonic App - An DSub based Android app for connection to Booksonic-Air servers."
+project_blurb: |
+  [{{ project_name|capitalize }}]({{ project_url }}) is a platform for accessing the audiobooks you own wherever you are. At the moment the platform consists of:
+  * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.
+  * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 # supported architectures
 available_architectures:
@@ -29,7 +32,8 @@ opt_param_env_vars:
 readonly_supported: true
 # application setup block
 app_setup_block_enabled: true
-app_setup_block: "While this is a more up to date rebase of the original Booksonic server, upgrading in place is not supported and a fresh install has been recommended. Default user/pass is admin/admin"
+app_setup_block: |
+  While this is a more up to date rebase of the original Booksonic server, upgrading in place is not supported and a fresh install has been recommended. Default user/pass is admin/admin
 # init diagram
 init_diagram: |
   "booksonic-air:latest": {
