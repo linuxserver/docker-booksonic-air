@@ -9,6 +9,7 @@ project_blurb: |
   * Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic.
   * Booksonic App - An DSub based Android app for connection to Booksonic-Air servers.
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_deprecation_status: true
 # supported architectures
 available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
@@ -79,6 +80,7 @@ init_diagram: |
   "booksonic-air:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "24.12.24:", desc: "Deprecate."}
   - {date: "31.05.24:", desc: "Rebase to Alpine 3.20."}
   - {date: "20.03.24:", desc: "Rebase to Alpine 3.19."}
   - {date: "10.07.23:", desc: "Rebase to Alpine 3.18."}
